@@ -43,12 +43,20 @@ public class Servicio {
         num.setSaldoActual(total);   
     }
     public void extraccionRapida(Cuenta num){
-       int saldo=num.getSaldoActual();
+       Scanner leer=new Scanner(System.in);
+        int saldo=num.getSaldoActual();
        double cant=0;
        cant=(saldo*0.20);
-       int total=(int)(saldo-cant);
-        System.out.println("Usted retiro $: "+cant);
-        num.setSaldoActual(total);
+       String opcion;
+        System.out.println("Usted Puede retirar $: "+cant+"\nEsta seguro? S/N");
+        opcion=leer.next();
+        if (opcion.equalsIgnoreCase("S")){
+            int total=(int)(saldo-cant);
+            System.out.println("Usted retiro $: "+cant);
+            num.setSaldoActual(total);
+        }else
+            System.out.println("No se realizo el retiro");
+       
        
     }
     public void consultarSaldo(Cuenta num){
