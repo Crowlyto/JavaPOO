@@ -47,7 +47,7 @@ public class Servicio {
        double cant=0;
        cant=(saldo*0.20);
        int total=(int)(saldo-cant);
-        System.out.println("Usted puede retirar $: "+cant);
+        System.out.println("Usted retiro $: "+cant);
         num.setSaldoActual(total);
        
     }
