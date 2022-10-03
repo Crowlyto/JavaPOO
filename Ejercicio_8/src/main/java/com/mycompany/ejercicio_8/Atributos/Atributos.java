@@ -11,6 +11,7 @@ package com.mycompany.ejercicio_8.Atributos;
 public class Atributos {
     private String Cadena;
     private int largo;
+    private String nuevafrase;
 
     public Atributos() {
     }
@@ -34,6 +35,14 @@ public class Atributos {
 
     public void setLargo(int largo) {
         this.largo = largo;
+    }
+
+    public String getNuevafrase() {
+        return nuevafrase;
+    }
+
+    public void setNuevafrase(String nuevafrase) {
+        this.nuevafrase = nuevafrase;
     }
 
     @Override
