@@ -32,9 +32,9 @@ public class Ejercicio_7 {
             switch (opcion) {
                 case 1:
                     System.out.println("DATOS");
-                    for (int i = 0; i < 2; i++) {
-                        System.out.println("==========\nDATOS PERSONA " + (i + 1));
-                        serv.Mostrar(pers[i]);
+                    for (int j = 0; j <pers.length; j++) {
+                        System.out.println("==========\nDATOS PERSONA " + (j + 1));
+                        serv.Mostrar(pers[j]);
                     }
                     break;
                 case 2:
@@ -45,7 +45,7 @@ public class Ejercicio_7 {
                             pesof++;
                         } else if (serv.calcularIMC(pers[i]) == 0) {
                             peson++;
-                        } else if (serv.calcularIMC(pers[i]) == 1) {
+                        } else  if(serv.calcularIMC(pers[i]) == 1) {
                             pesoa++;
                         }
                     }
@@ -72,7 +72,7 @@ public class Ejercicio_7 {
                     break;
 
             }
-        } while (opcion != 4);
+        } while (opcion != 4&&cant<4);
 
     }
 }
